@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        showsStackView.isHidden = true
+        randomShowStackView.isHidden = true
     }
 
     
@@ -31,17 +32,36 @@ class ViewController: UIViewController {
         showLbl.text = shows.joined(separator: ", ")
     }
     
-    @IBAction func addShowBtnPressed(_ sender: Any) {
-        guard let showName = addShowTextField.text else {return}
-        shows.append(showName)
-        updateShowsLabel()
-        addShowTextField.text = ""
-        
+    @IBAction func bingeBtnPressed(_ sender: Any) {
+        randomShowLbl.text = shows.randomElement()
+        randomShowLbl.isHidden = false
+        bingebotSpokenLbl.isHidden = false
     }
     
     
     
     
-
+    
+    @IBAction func addShowBtnPressed(_ sender: Any) {
+        guard let showName = addShowTextField.text else {return}
+        if addShowTextField.text != "" {
+            // rest of the code you already have in there.
+        shows.append(showName)
+        updateShowsLabel()
+        addShowTextField.text = ""
+        showsStackView.isHidden = false
+        if shows.count >= 2{
+            randomShowStackView.isHidden = false
+            bingebotSpokenLbl.isHidden = true
+            randomShowLbl.isHidden = true
+            
+        }
+        
+    }
+    
+    
+    
+    //addShowTextField
+    }
 }
 
