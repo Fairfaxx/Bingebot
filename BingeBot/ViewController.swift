@@ -45,7 +45,6 @@ class ViewController: UIViewController {
     @IBAction func addShowBtnPressed(_ sender: Any) {
         guard let showName = addShowTextField.text else {return}
         if addShowTextField.text != "" {
-            // rest of the code you already have in there.
         shows.append(showName)
         updateShowsLabel()
         addShowTextField.text = ""
@@ -57,11 +56,15 @@ class ViewController: UIViewController {
             
         }
         
+       }
     }
     
     
-    
-    //addShowTextField
+    @IBAction func clearQueryPressed(_ sender: Any) {
+        showsStackView.isHidden = true
+        randomShowStackView.isHidden = true
+        shows.removeAll()
     }
+    
 }
 
