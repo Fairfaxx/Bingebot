@@ -1,40 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fs8-CS-PUe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Binge Screen-->
+        <scene sceneID="2nm-0e-nAX">
+            <objects>
+                <viewController id="Fs8-CS-PUe" customClass="BingeScreen" customModule="BingeBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZC-Ff-x05">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="uCy-BM-7Ah">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have many options and don't know which one to pick? Let the BingeBot to do his job!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nc-6P-Zls">
+                                <rect key="frame" x="20" y="348" width="374" height="158.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jZ-8q-ynj">
+                                <rect key="frame" x="20" y="750" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="UYZ-qA-uPJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="GO TO THE BINGE QUERY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8P8-eO-XLR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-9" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-n3-nWR">
+                                <rect key="frame" x="20" y="99" width="374" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-BX-ecm">
+                                        <rect key="frame" x="141" y="0.0" width="92" height="101.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BingeBot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-UR-xNw">
+                                        <rect key="frame" x="111" y="92.5" width="152" height="101.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9fa-n3-nWR" firstAttribute="centerX" secondItem="xZC-Ff-x05" secondAttribute="centerX" id="3CQ-Fh-CnZ"/>
+                            <constraint firstItem="7nc-6P-Zls" firstAttribute="leading" secondItem="2gF-hG-9SK" secondAttribute="leading" constant="20" id="4b8-Sc-Zvq"/>
+                            <constraint firstItem="2gF-hG-9SK" firstAttribute="trailing" secondItem="7nc-6P-Zls" secondAttribute="trailing" constant="20" id="562-Pj-1r3"/>
+                            <constraint firstItem="2gF-hG-9SK" firstAttribute="trailing" secondItem="3jZ-8q-ynj" secondAttribute="trailing" constant="20" id="75U-EX-jID"/>
+                            <constraint firstAttribute="trailing" secondItem="uCy-BM-7Ah" secondAttribute="trailing" id="D6j-6F-hMO"/>
+                            <constraint firstItem="2gF-hG-9SK" firstAttribute="bottom" secondItem="3jZ-8q-ynj" secondAttribute="bottom" constant="53" id="Hjp-XB-lvD"/>
+                            <constraint firstItem="9fa-n3-nWR" firstAttribute="top" secondItem="2gF-hG-9SK" secondAttribute="top" constant="55" id="OyT-E9-oJb"/>
+                            <constraint firstItem="7nc-6P-Zls" firstAttribute="top" secondItem="9fa-n3-nWR" secondAttribute="bottom" constant="55" id="ULX-po-yVv"/>
+                            <constraint firstItem="7nc-6P-Zls" firstAttribute="centerX" secondItem="xZC-Ff-x05" secondAttribute="centerX" id="ZHT-r1-yka"/>
+                            <constraint firstAttribute="bottom" secondItem="uCy-BM-7Ah" secondAttribute="bottom" id="adF-Gv-Juz"/>
+                            <constraint firstItem="uCy-BM-7Ah" firstAttribute="top" secondItem="xZC-Ff-x05" secondAttribute="top" id="cKB-ue-zQ0"/>
+                            <constraint firstItem="2gF-hG-9SK" firstAttribute="trailing" secondItem="9fa-n3-nWR" secondAttribute="trailing" constant="20" id="fuW-zL-dTx"/>
+                            <constraint firstItem="3jZ-8q-ynj" firstAttribute="leading" secondItem="2gF-hG-9SK" secondAttribute="leading" constant="20" id="qKQ-p8-bTy"/>
+                            <constraint firstItem="uCy-BM-7Ah" firstAttribute="leading" secondItem="xZC-Ff-x05" secondAttribute="leading" id="sZr-YS-NqN"/>
+                            <constraint firstItem="9fa-n3-nWR" firstAttribute="leading" secondItem="2gF-hG-9SK" secondAttribute="leading" constant="20" id="wkP-n3-6f3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2gF-hG-9SK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRv-46-MZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1138" y="127"/>
+        </scene>
+        <!--Home Vc-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BingeBot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="HomeVc" customModule="BingeBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="daH-wd-QUI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BingeBot  🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2q-lL-kQ0">
-                                <rect key="frame" x="80" y="20" width="160" height="37"/>
+                                <rect key="frame" x="127" y="64" width="160" height="37"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="kcU-Te-e3w">
-                                <rect key="frame" x="20" y="72" width="280" height="121.5"/>
+                                <rect key="frame" x="20" y="116" width="374" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR QUERY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfD-Pp-I74">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Mad Men&quot;, &quot;The Office&quot;, &quot;Gilmore Girls&quot;, &quot;Peaky Blinders&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTN-2q-7vC">
-                                        <rect key="frame" x="0.0" y="27" width="280" height="94.5"/>
+                                        <rect key="frame" x="0.0" y="27" width="374" height="63"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -42,25 +115,25 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BRn-BR-gVK">
-                                <rect key="frame" x="20" y="213.5" width="280" height="249"/>
+                                <rect key="frame" x="20" y="226" width="374" height="249"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9fC-yF-E9h">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="133"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="133"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BINGEBOT HAS SPOKEN, YOU SHOULD WATCH..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-dA-Q5b">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BINGEBOT HAS SPOKEN, YOU SHOULD CHOOSE..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="qAL-dA-Q5b">
+                                                <rect key="frame" x="2.5" y="0.0" width="369" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAD MEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-8t-WKT">
-                                                <rect key="frame" x="63.5" y="35.5" width="153.5" height="42.5"/>
+                                                <rect key="frame" x="110.5" y="35.5" width="153.5" height="42.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="31"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-mT-rk4">
-                                                <rect key="frame" x="44" y="93" width="192" height="40"/>
+                                                <rect key="frame" x="91" y="93" width="192" height="40"/>
                                                 <state key="normal" image="binge-btn"/>
                                                 <connections>
                                                     <action selector="bingeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFL-zK-yCG"/>
@@ -69,17 +142,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="zqV-yN-ZxI">
-                                        <rect key="frame" x="0.0" y="153" width="280" height="96"/>
+                                        <rect key="frame" x="0.0" y="153" width="374" height="96"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER A BINGE-WORTHY SHOW" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4US-dO-FXQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhj-8p-aqi">
-                                                <rect key="frame" x="0.0" y="56" width="280" height="40"/>
+                                                <rect key="frame" x="0.0" y="56" width="374" height="40"/>
                                                 <state key="normal" image="add-show-btn"/>
                                                 <connections>
                                                     <action selector="addShowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D1Y-zs-gyW"/>
@@ -90,7 +163,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjc-T8-1Rv">
-                                <rect key="frame" x="20" y="480" width="280" height="51"/>
+                                <rect key="frame" x="20" y="774" width="374" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="u3Q-KF-KPR"/>
                                 </constraints>
@@ -123,6 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Djp-4e-Vxx"/>
                     <connections>
                         <outlet property="addShowBtn" destination="Bhj-8p-aqi" id="zaR-hh-3uf"/>
                         <outlet property="addShowStackView" destination="zqV-yN-ZxI" id="EcM-cO-d2f"/>

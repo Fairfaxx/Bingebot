@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeVc: UIViewController {
 
     @IBOutlet weak var showLbl: UILabel!
     @IBOutlet weak var randomShowLbl: UILabel!
@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var showsStackView: UIStackView!
     
     var shows: [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
